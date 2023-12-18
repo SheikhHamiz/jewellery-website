@@ -90,4 +90,58 @@
 .items-container p {
     background-color: transparent;
 }
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+}
+.best-sellers-container {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    margin-inline: 0;
+    padding-inline: 0;
+}
+.best-sellers-slider {
+    display: flex;
+    transition: ease-in 250ms;
+    gap: 4%;
+    width: 80%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+.best-sellers-slider figure {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    max-width: 21%;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.best-sellers-slider img {
+    display: flex;
+    flex-shrink: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 4px #84292B;
+}
+.best-sellers-slider figure button {
+    background-color: #D9D9D9;
+    border: none;
+    margin-top: 1rem;
+    box-shadow: 0px 6px 4px #00000040;
+    padding: 0.4rem;
+}
+.best-sellers-slider figure p {
+    background-color: transparent;
+}
+.right-slider, .left-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    z-index: 1000;
+}
 
