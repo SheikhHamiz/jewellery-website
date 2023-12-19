@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #FED7BA;
+    scroll-behavior: smooth;
 }
 .header {
     display: flex;
