@@ -9,8 +9,8 @@ const thirdSlides = Array.from(thirdCarousel.children);
 let index = 0;
 const videos = [
     "./videos/A World Of Stylish Designs - BlueStone.com.mp4",
-    "./videos/Tanishq's Great Diamond Sale - Father & Daughter.mp4"
-]
+    "./videos/pexels_videos_3439 (1080p).mp4"
+];
 this.setInterval( ()=> {
     if(index == 0) index++;
     else index = 0;
