@@ -28,6 +28,60 @@
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="#"><i class="fa-solid fa-user-plus"></i></a>
         </div>
+        <div class="form">
+            <img src="images/login_and Blog_resources/login.jpg" alt="women">
+            <form id="form">
+                <div class="signup">
+                    <div class="form-nav">
+                        <p class="active signin-nav" onclick="openSignIn()">Sign up</p>
+                        <p class="login-nav" onclick="openLogin()">Login</p>
+                        <i class="fa-solid fa-close" onclick="closeForm()"></i>
+                    </div>
+                    <p class="desc">
+                        Sign up & get Rs. 500 off* coupon code for your first purchase!
+                    </p>
+                    <div class="signup-container">
+                        <input class="input" type="text" placeholder="Name" required>
+                        <div class="verify">
+                            <input class="input" type="email" placeholder="Email" required>
+                            <button class="btn-verify">Verify</button>
+                        </div>
+                        <div class="verify">
+                            <input class="input" type="number" placeholder="Phone">
+                            <button class="btn-verify">Verify</button>
+                        </div>
+                        <input class="input" type="password" placeholder="Password" required>
+                        <input class="input" type="password" placeholder="Confirm Password" required>
+                        <div class="terms-condition">
+                            <input type="checkbox" name="terms" id="terms" required>
+                            <span>I agree to the Terms of use and Privacy Statement</span>
+                        </div>
+                        <button type="submit" class="form-btn">Submit</button>
+                    </div>
+                </div>
+                <div class="login">
+                    <div class="form-nav">
+                        <p class="signin-nav" onclick="openSignIn()">Sign up</p>
+                        <p class="login-nav active" onclick="openLogin()">Login</p>
+                        <i class="fa-solid fa-close" onclick="closeForm()"></i>
+                    </div>
+                    <div class="login-container">
+                        <input class="input"  type="text" placeholder="Email ID/Phone Number">
+                        <input class="input"  type="password" placeholder="Password">
+                        <button type="submit" class="form-btn">Login</button>
+                        <p class="info">Forgot Password ?</p>
+                        <button type="submit" class="google-btn"> 
+                            <i class="fa-brands fa-google"></i>
+                            Login with Google
+                        </button>
+                        <div class="bottom-login-container">
+                            <p >New User?</p>
+                            <p class="sign-nav-2" onclick="openSignIn()">Sign up now</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </header>
     <main>
         <section>

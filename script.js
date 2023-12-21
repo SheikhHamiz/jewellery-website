@@ -5,6 +5,9 @@ const thirdCarousel = document.querySelector(".third-carousel-slider");
 const topslides = Array.from(topCarousel.children);
 const secondSlides =Array.from(secondCarousel.children);
 const thirdSlides = Array.from(thirdCarousel.children);
+const form = document.querySelector(".form");
+const signUpForm = document.querySelector(".signup");
+const loginForm = document.querySelector(".login");
 
 let index = 0;
 const videos = [
@@ -86,3 +89,21 @@ this.setInterval( () => {
     currentSlide.classList.remove("current-slide");
     nextSlide.classList.add("current-slide");
 } ,3000);
+
+this.setTimeout ( ()=> {
+    form.style.display = "grid";
+},3000) 
+
+const openSignIn = () => {
+    signUpForm.style.display = "block";
+    loginForm.style.display = "none";
+}
+
+const openLogin = () => {
+    signUpForm.style.display = "none";
+    loginForm.style.display = "block";
+}
+
+const closeForm = () => {
+    form.style.display = "none"
+}
