@@ -16,22 +16,25 @@
 <body>
     <header class="header">
         <nav>
-            <ul class="nav">
+            <ul class="nav" aria-disabled="true">
                 <li><a href="#">Home</a></li>
                 <li><a href="pages/shop/cystals.html">Shop</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="./pages/blog/aboutUs.html">Blog</a></li>
             </ul>
+            <i class="fa-solid fa-bars menu-toggle mobile"></i>              
         </nav>
-        <img class="logo" src="images/Logo.png" alt="logo">
+        <img class="logo desktop" src="images/Logo.png" alt="logo">
+        <img class="logo mobile" src="images/phone_logo.png" alt="logo">
         <div class="nav">
             <a href="#"><i class="fa-solid fa-heart"></i></a>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#"><i class="fa-solid fa-user-plus"></i></a>
+            <a href="#" class="not-logged" aria-disabled="false"><i class="fa-solid fa-user-plus"></i></a>
+            <a href="/pages/profile/profileSection.html" class="logged" aria-disabled="true">C</a>
         </div>
         <div class="form">
             <img src="images/login_and Blog_resources/login.jpg" alt="women">
-            <form id="form">
-                <div class="signup">
+            <div id="form">
+                <form class="signup">
                     <div class="form-nav">
                         <p class="active signin-nav" onclick="openSignIn()">Sign up</p>
                         <p class="login-nav" onclick="openLogin()">Login</p>
@@ -50,16 +53,16 @@
                             <input class="input" type="number" placeholder="Phone">
                             <button class="btn-verify">Verify</button>
                         </div>
-                        <input class="input" type="password" placeholder="Password" required>
-                        <input class="input" type="password" placeholder="Confirm Password" required>
+                        <input class="input"  type="password" placeholder="Password" required>
+                        <input class="input"  type="password" placeholder="Confirm Password" required>
                         <div class="terms-condition">
-                            <input type="checkbox" name="terms" id="terms" required>
+                            <input type="checkbox" id="terms" required>
                             <span>I agree to the Terms of use and Privacy Statement</span>
                         </div>
-                        <button type="submit" class="form-btn">Submit</button>
-                    </div>
+                        <button  class="form-btn" onclick="loggedIn()">Submit</button>
+                    </form>
                 </div>
-                <div class="login">
+                <form class="login">
                     <div class="form-nav">
                         <p class="signin-nav" onclick="openSignIn()">Sign up</p>
                         <p class="login-nav active" onclick="openLogin()">Login</p>
@@ -68,9 +71,9 @@
                     <div class="login-container">
                         <input class="input"  type="text" placeholder="Email ID/Phone Number" required>
                         <input class="input"  type="password" placeholder="Password" required>
-                        <button type="submit" class="form-btn">Login</button>
+                        <button  class="form-btn" onclick="loggedIn()">Login</button>
                         <p class="info">Forgot Password ?</p>
-                        <button type="submit" class="google-btn"> 
+                        <button class="google-btn" onclick="loggedIn()"> 
                             <i class="fa-brands fa-google"></i>
                             Login with Google
                         </button>
@@ -79,13 +82,17 @@
                             <p class="sign-nav-2" onclick="openSignIn()">Sign up now</p>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </header>
     <main>
         <section>
-            <aside class="top-container">
+            <label for="search" class="search-bar mobile">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="search">
+            </label>
+            <aside class="top-container desktop">
                 <div class="top-carousel">
                     <div class="top-carousel-slider">
                         <img  class="top-carousel-img current-slide" src="images/bleft.jpg" alt="cover">
@@ -105,19 +112,43 @@
                     </div>
                 </div>
             </aside>
+            <aside class="top-container-mobile mobile">
+                <i class="fa-solid fa-circle-arrow-left left-btn"></i>
+                <div class="top-carousel-mobile">
+                    <div class="top-carousel-mobile-slider">
+                        <img src="images/bleft.jpg" alt="cover" width="100%" height="600px">
+                        <img src="images/sabrianna-Y_bxfTa_iUA-unsplash.jpg" alt="cover" width="100%" height="600px">
+                        <img src="images/rtop.webp" alt="cover" width="100%" height="600px">
+                    </div>
+                </div>
+                <i class="fa-solid fa-circle-arrow-right right-btn"></i>
+            </aside>
             <aside class="second-container">
                 <h3 class="second-container-heading">Browse By Category</h3>
                 <p class="second-container-desc">Discover elegance at your fingertips</p>
+                <img class="mobile-line" src="images/Line-Design.svg" alt="line-design">
                 <div class="category-container">
                     <div>
                         <p>Crystals</p>
-                        <img class="shadow-cream" src="images/choong-deng-xiang-WR98S28oRLM-unsplash.jpg" alt="stones">
-                        <img class="shadow-red" src="images/diamond-1199183_640.jpg" alt="diamond">
+                        <figure>
+                            <img class="shadow-cream" src="images/choong-deng-xiang-WR98S28oRLM-unsplash.jpg" alt="stones">
+                            <figcaption>Gemstone</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="shadow-red" src="images/diamond-1199183_640.jpg" alt="diamond">
+                            <figcaption>Diamond</figcaption>
+                        </figure>
                     </div>
                     <div>
                         <p>Carats</p>
-                        <img class="shadow-red" src="images/gold-296115_640.jpg" alt="gold">
-                        <img class="shadow-cream" src="images/sabrianna-lbqW0O09RAM-unsplash.jpg" alt="platinum">
+                        <figure>
+                            <img class="shadow-red" src="images/gold-296115_640.jpg" alt="gold">
+                            <figcaption>Gold</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="shadow-cream" src="images/sabrianna-lbqW0O09RAM-unsplash.jpg" alt="platinum">
+                            <figcaption>Platinum</figcaption>
+                        </figure>
                     </div>
                 </div>
             </aside>
@@ -218,7 +249,7 @@
                 <p style="font-weight: normal;" class="second-container-heading">Recommendation For You</p>
                 <p class="third-container-desc">Style meets the pulse of fashion</p>
                 <img src="images/Line-Design.svg" alt="line-design">
-                <div class="red-container">
+                <div class="red-container desktop">
                     <div>
                         <img src="images/Birthday.jpg" alt="birthday">
                         <img src="images/anniversary.jpg" alt="anniversary">

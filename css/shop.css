@@ -165,6 +165,7 @@ a {
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 10px 10px 4px #84292B;
+    height: 125px;
 }
 .item-container-2 button {
     width: 50%;
@@ -200,5 +201,163 @@ a {
     border: none;
     color: white;
 }
+.ad-banner {
+    border: 1px solid black;
+    border-radius: 12px;
+}
+.bridal-collection-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 1rem;
+}
+.bridal-collection-container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.bridal-collection-container img {
+    height: 300px;
+    width: 200px;
+}
+.bridal-collection-container button {
+    width: 150px;
+    background-color: #84292B;
+    font-weight: 600;
+    padding-block: 0.4rem;
+    border: none;
+    color: white;
+}
+.bridal-special-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.bridal-special-container img {
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+}
+.special-occasion-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 2rem 1rem;
+    gap: 1rem;
+}
+.special-occasion-container  :nth-child(1), .special-occasion-container  :nth-child(2),
+ .special-occasion-container  :nth-child(3) {
+    grid-column: 1/2;
+ }
+ .special-occasion-container  :nth-child(4) {
+    grid-column: 2/3;
+    grid-row: 1/4;
+ }
+ .special-occasion-container :last-child {
+    grid-column: 1/3;
+ }
+ .special-occasion-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 10px 10px 4px #00000040;
+ }
+ .gift-card {
+    display: block;
+    margin-inline: auto;
+    width: 90%;
+    border: 1px solid #00000054;
+    margin-bottom: 1rem;
+ }
+ .gift-type-container, .gift-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    padding: 2rem 4rem;
+    font-family: "Poppins";
+    font-weight: bold;
+    text-align: center;
+ }
+ .gift-type-container figure {
+    background-color: white;
+ }
+ .gift-type-container  img {
+    width: 100%;
+    height: 90%;
+ }
+ .gift-type-container  p {
+    background-color: transparent;
+ }
+ .gift-container figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    height: 400px;
+    width: 300px;
+ }
+ .gift-container img {
+    width: 60%;
+    height: 60%;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+ }
+ .gift-container p {
+    background-color: transparent;
+    margin-bottom: 1rem;
+ }
+ .quote-section {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-inline: 2rem;
+    margin-block: 2rem;
+ }
+ .quote-section :last-child {
+    grid-column: 3/4;
+    grid-row: 2/3;
+ }
 
-
+ .box {
+    background-color: #D9D9D9;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-inline: 1rem;
+    padding-bottom: 100px;
+    font-family: "Poppins";
+ }
+ .box > p {
+    padding-inline: -10%;
+ }
+ .box > p , .box > img {
+    background-color: transparent;
+ }
+ .box > .img-1 {
+    position:relative;
+    right: -60%;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+ }
+ .box > .img-2 {
+    position:relative;
+    left: -3%;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+ }
+ .box > .top-heading {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 1rem;
+ }
+ .last-child {
+    background-color: #E0C4C4CC;
+ }
